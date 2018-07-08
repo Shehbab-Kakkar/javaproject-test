@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cp -v bin/HelloWorld.jar /root/Python'
+                sh 'cp -v bin/HelloWorld.jar ~/'
             }
         }
     }
