@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'java -jar bin/HelloWorld.jar'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'cp -v bin/HelloWorld.jar /root/Python'
             }
         }
     }
