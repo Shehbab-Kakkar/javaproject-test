@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh '/usr/share/ant/bin/ant done'
             }
         }
         stage('Test') {
