@@ -7,4 +7,9 @@ pipeline {
       }
     }
   }
+  stage('Deploy') {
+      steps {
+        sh 'cp -v /var/lib/jenkins/workspace/first-java-program/bin/HelloWorld.jar /root/Python'
+      }
+    }
 }
