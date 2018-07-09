@@ -17,5 +17,12 @@ pipeline {
                 sh 'cp -v bin/HelloWorld.jar ~/'
             }
         }
+
+         stage('Ansible') {
+            steps {
+                ansiblePlaybook inventory: '/etc/ansible/hosts', playbook: '/etc/ansible/ansible.yaml'
+            }
+        }
+
     }
 }
