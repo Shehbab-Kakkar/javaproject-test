@@ -20,8 +20,7 @@ pipeline {
 
          stage('Ansible') {
             steps {
-                  //sh 'ansible-playbook -vv /etc/ansible/ansible.yaml -i /etc/ansible/hosts'
-                  ansiblePlaybook become: true, colorized: true, disableHostKeyChecking: true, inventory: '/etc/ansible/hosts', playbook: '/etc/ansible/ansible.yaml'
+                ansiblePlaybook inventory: '/etc/ansible/hosts', playbook: '/etc/ansible/ansible.yaml'
             }
         }
 
